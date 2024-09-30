@@ -43,9 +43,9 @@ void rotr(stack_t **stack, unsigned int line_number)
 	if (!STACK.top || !STACK.top->next)
 		return;
 
-	while (last->next)
+	while (last->next) {
 		last = last->next;
-
+	}
 		last->prev->next = NULL;
 		last->prev = NULL;
 		last->next = STACK.top;
